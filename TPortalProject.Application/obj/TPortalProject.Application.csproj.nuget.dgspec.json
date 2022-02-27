@@ -27,6 +27,136 @@
         "frameworks": {
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
+            "projectReferences": {
+              "C:\\Users\\fmsvi\\source\\repos\\TPortalProject\\TPortalProject.Data\\TPortalProject.Data.csproj": {
+                "projectPath": "C:\\Users\\fmsvi\\source\\repos\\TPortalProject\\TPortalProject.Data\\TPortalProject.Data.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.405\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\fmsvi\\source\\repos\\TPortalProject\\TPortalProject.Data\\TPortalProject.Data.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\fmsvi\\source\\repos\\TPortalProject\\TPortalProject.Data\\TPortalProject.Data.csproj",
+        "projectName": "TPortalProject.Data",
+        "projectPath": "C:\\Users\\fmsvi\\source\\repos\\TPortalProject\\TPortalProject.Data\\TPortalProject.Data.csproj",
+        "packagesPath": "C:\\Users\\fmsvi\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\fmsvi\\source\\repos\\TPortalProject\\TPortalProject.Data\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\fmsvi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {
+              "C:\\Users\\fmsvi\\source\\repos\\TPortalProject\\TPortalProject.Domain\\TPortalProject.Domain.csproj": {
+                "projectPath": "C:\\Users\\fmsvi\\source\\repos\\TPortalProject\\TPortalProject.Domain\\TPortalProject.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[3.1.22, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[3.1.22, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer.NetTopologySuite": {
+              "target": "Package",
+              "version": "[3.1.22, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.405\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\fmsvi\\source\\repos\\TPortalProject\\TPortalProject.Domain\\TPortalProject.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\fmsvi\\source\\repos\\TPortalProject\\TPortalProject.Domain\\TPortalProject.Domain.csproj",
+        "projectName": "TPortalProject.Domain",
+        "projectPath": "C:\\Users\\fmsvi\\source\\repos\\TPortalProject\\TPortalProject.Domain\\TPortalProject.Domain.csproj",
+        "packagesPath": "C:\\Users\\fmsvi\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\fmsvi\\source\\repos\\TPortalProject\\TPortalProject.Domain\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\fmsvi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
             "projectReferences": {}
           }
         },

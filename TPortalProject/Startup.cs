@@ -2,9 +2,12 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.SpaServices.AngularCli;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using TPortalProject.Data.Context;
+using TPortalProject.Extensions;
 
 namespace TPortalProject
 {
@@ -21,6 +24,11 @@ namespace TPortalProject
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
+
+            services.AddDbContext<TPortalProjectContext>(opt => opt.UseSqlServer(Configuration.GetConnectionString("TPortalProjectDB")).EnableSensitiveDataLogging());
+
+            NativeInjectionExtension.RegisterServices(services);
+
             // In production, the Angular files will be served from this directory
             services.AddSpaStaticFiles(configuration =>
             {
