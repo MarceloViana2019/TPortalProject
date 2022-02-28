@@ -6,7 +6,7 @@ namespace TPortalProject.Application.ViewModels
 {
     public class UserViewModel
     {
-        public Guid Id { set; get; }
+        public int Id { set; get; }
         public string Name { set; get; }
         public string Mail { set; get; }
     }

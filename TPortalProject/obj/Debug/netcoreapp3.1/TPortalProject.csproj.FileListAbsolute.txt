@@ -90,3 +90,6 @@ C:\Users\fmsvi\source\repos\TPortalProject\TPortalProject\bin\Debug\netcoreapp3.
 C:\Users\fmsvi\source\repos\TPortalProject\TPortalProject\bin\Debug\netcoreapp3.1\TPortalProject.Data.pdb
 C:\Users\fmsvi\source\repos\TPortalProject\TPortalProject\bin\Debug\netcoreapp3.1\TPortalProject.Domain.pdb
 C:\Users\fmsvi\source\repos\TPortalProject\TPortalProject\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\fmsvi\source\repos\TPortalProject\TPortalProject\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\fmsvi\source\repos\TPortalProject\TPortalProject\bin\Debug\netcoreapp3.1\TPortalProject.Auth.dll
+C:\Users\fmsvi\source\repos\TPortalProject\TPortalProject\bin\Debug\netcoreapp3.1\TPortalProject.Auth.pdb

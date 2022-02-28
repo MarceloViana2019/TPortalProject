@@ -11,5 +11,6 @@ namespace TPortalProject.Application.Interfaces
     {
         List<UserViewModel> GetAll();
         User Post(UserDTO user);
+        UserViewModel GetById(int Id);
     }
 }

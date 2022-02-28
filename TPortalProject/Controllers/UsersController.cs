@@ -32,5 +32,10 @@ namespace TPortalProject.Controllers
             return Ok(_userService.Post(user));
         }
 
+        [HttpGet("{id}")]
+        public IActionResult GetById(int id)
+        {
+            return Ok(_userService.GetById(id));
+        }
     }
 }

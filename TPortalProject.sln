@@ -13,11 +13,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3-Domain", "3-Domain", "{8D
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4-Infra", "4-Infra", "{8343ACD5-C238-412C-8B49-02651F706306}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TPortalProject.Application", "TPortalProject.Application\TPortalProject.Application.csproj", "{DF657C9C-5E1F-4A74-8164-A9C3259FCB36}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TPortalProject.Application", "TPortalProject.Application\TPortalProject.Application.csproj", "{DF657C9C-5E1F-4A74-8164-A9C3259FCB36}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TPortalProject.Domain", "TPortalProject.Domain\TPortalProject.Domain.csproj", "{6C63156A-C7CA-4D7C-AD6F-CC0C50492D10}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TPortalProject.Domain", "TPortalProject.Domain\TPortalProject.Domain.csproj", "{6C63156A-C7CA-4D7C-AD6F-CC0C50492D10}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TPortalProject.Data", "TPortalProject.Data\TPortalProject.Data.csproj", "{23343D29-9057-4BF5-AD6E-E16BD806D34D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TPortalProject.Data", "TPortalProject.Data\TPortalProject.Data.csproj", "{23343D29-9057-4BF5-AD6E-E16BD806D34D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TPortalProject.Auth", "TPortalProject.Auth\TPortalProject.Auth.csproj", "{D5985135-9D43-48C8-BA3C-57A94B501BD1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -41,6 +43,10 @@ Global
 		{23343D29-9057-4BF5-AD6E-E16BD806D34D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{23343D29-9057-4BF5-AD6E-E16BD806D34D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{23343D29-9057-4BF5-AD6E-E16BD806D34D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D5985135-9D43-48C8-BA3C-57A94B501BD1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D5985135-9D43-48C8-BA3C-57A94B501BD1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D5985135-9D43-48C8-BA3C-57A94B501BD1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D5985135-9D43-48C8-BA3C-57A94B501BD1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -50,6 +56,7 @@ Global
 		{DF657C9C-5E1F-4A74-8164-A9C3259FCB36} = {A5E5B6B9-780E-48CE-AF55-D18B86A83F9D}
 		{6C63156A-C7CA-4D7C-AD6F-CC0C50492D10} = {8D31ACAD-31CC-4B62-A51E-8BBDBF1BFC2A}
 		{23343D29-9057-4BF5-AD6E-E16BD806D34D} = {8343ACD5-C238-412C-8B49-02651F706306}
+		{D5985135-9D43-48C8-BA3C-57A94B501BD1} = {8343ACD5-C238-412C-8B49-02651F706306}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {79A9A0E0-35B1-47CC-9B31-AD04C34BD3CA}

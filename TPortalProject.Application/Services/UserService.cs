@@ -33,10 +33,26 @@ namespace TPortalProject.Application.Services
         public User Post(UserDTO userDTO)
         {
             var user = new User();
+            //Implementar AutoMapper
 
             var result = _userRepository.Create(user);
 
             return result;
+        }
+
+        public UserViewModel GetById(int Id)
+        {
+            var user = _userRepository.Get(Id);
+
+            if (user == null)
+                throw new Exception("User not found");
+
+            //Implementar AutoMapper
+
+            var userViewModel = new UserViewModel();
+
+            return userViewModel;
+
         }
     }
 }
