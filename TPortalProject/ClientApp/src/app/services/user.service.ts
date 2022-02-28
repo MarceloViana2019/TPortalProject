@@ -1,19 +1,33 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { environment } from 'src/environments/environment';
 
+const httpOptions = {
+  headers: new HttpHeaders({ 'Content-Type': 'application/json' })
+};
 
 @Injectable({
   providedIn: 'root'
 })
+
 export class UserService {
 
   private module: string = '/api/users';
 
   constructor(private http: HttpClient) { }
 
-  getAll(): Observable<any> {
-     return this.http.get(this.module);
+  login(email: string, password: string): Observable<any> {
+    return this.http.post(this.module + '/authenticate', {
+      email,
+      password
+    }, httpOptions);
+  }
+
+  register(username: string, email: string, password: string): Observable<any> {
+    return this.http.post(this.module + 'signup', {
+      username,
+      email,
+      password
+    }, httpOptions);
   }
 }

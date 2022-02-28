@@ -36,7 +36,7 @@ namespace TPortalProject.Application.Tests.Services
         [Fact]
         public void Post_SendingValidObject()
         {
-            var result = userService.Post(new UserDTO { Name = "Marcelo Viana", Mail = "fmsviana@gmail.com" });
+            var result = userService.Post(new UserDTO { Name = "Marcelo Viana", Email = "fmsviana@gmail.com" });
             Assert.True(result);
         }
 
@@ -44,7 +44,7 @@ namespace TPortalProject.Application.Tests.Services
         public void GetAll_SendingValidObject()
         {
             List<User> users = new List<User>();
-            users.Add(new User { Id = 1, Name = "Marcelo Viana", Mail = "fmsviana@gmail.com" });
+            users.Add(new User { Id = 1, Name = "Marcelo Viana", Email = "fmsviana@gmail.com" });
 
             var _userRepository = new Mock<IUserRepository>();
             _userRepository.Setup(x => x.GetAll()).Returns(users);

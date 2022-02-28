@@ -64,13 +64,23 @@ namespace TPortalProject.Application.Services
 
         public UserAuthResponseViewModel Authenticate(UserAuthRequestDTO userDTO)
         {
-            var user = _userRepository.Find(x => !x.IsDeleted && x.Mail.ToLower() == userDTO.Mail.ToLower());
-            if (user == null)
-                throw new Exception("User not found");
+            //var user = _userRepository.Find(x => !x.IsDeleted && x.Email.ToLower() == userDTO.Email.ToLower());
+            //if (user == null)
+            //    throw new Exception("User not found");
 
-            var userViewModel = new UserViewModel();
-
+            //Moq de objeto do banco de dados
+            var user = new User()
+            {
+                Id = 1,
+                Name = "Marcelo Viana",
+                Email = "fmsviana@gmail.com"
+            };
             //Implementar AutoMapper e carregar objeto
+            var userViewModel = new UserViewModel() { 
+                Id = user.Id,
+                Name = user.Name,
+                Email = user.Email
+            };
 
             return new UserAuthResponseViewModel(userViewModel, TokenService.GenerateToken(user));
 

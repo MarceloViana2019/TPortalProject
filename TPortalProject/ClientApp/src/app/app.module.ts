@@ -5,7 +5,6 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './account/home/home.component';
-import { UsersComponent } from './users/users.component';
 import { AppRoutingModule } from './app-routing.module';
 import { LoginComponent } from './account/login/login.component';
 import { ProfileComponent } from './account/profile/profile.component';
@@ -15,7 +14,6 @@ import { RegisterComponent } from './account/register/register.component';
   declarations: [
     AppComponent,
     HomeComponent,
-    UsersComponent,
     LoginComponent,
     ProfileComponent,
     RegisterComponent

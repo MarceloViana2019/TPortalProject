@@ -8,6 +8,6 @@ namespace TPortalProject.Application.ViewModels
     {
         public int Id { set; get; }
         public string Name { set; get; }
-        public string Mail { set; get; }
+        public string Email { set; get; }
     }
 }
