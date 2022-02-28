@@ -10,7 +10,8 @@ namespace TPortalProject.Application.Interfaces
     public interface IUserService
     {
         List<UserViewModel> GetAll();
-        User Post(UserDTO user);
+        bool Post(UserDTO user);
         UserViewModel GetById(int Id);
+        UserAuthResponseViewModel Authenticate(UserAuthRequestDTO userDTO);
     }
 }

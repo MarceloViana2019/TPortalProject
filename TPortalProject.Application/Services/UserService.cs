@@ -4,6 +4,7 @@ using System.Text;
 using TPortalProject.Application.DTO;
 using TPortalProject.Application.Interfaces;
 using TPortalProject.Application.ViewModels;
+using TPortalProject.Auth.Services;
 using TPortalProject.Data.Repositories.Interfaces;
 using TPortalProject.Domain.Entities;
 
@@ -30,14 +31,17 @@ namespace TPortalProject.Application.Services
             return userViewModels;
         }
 
-        public User Post(UserDTO userDTO)
+        public bool Post(UserDTO userDTO)
         {
+            if (userDTO.Id != 0)
+                throw new Exception("Id must be empty");
+
             var user = new User();
             //Implementar AutoMapper
 
-            var result = _userRepository.Create(user);
+            _userRepository.Create(user);
 
-            return result;
+            return true;
         }
 
         public UserViewModel GetById(int Id)
@@ -47,11 +51,24 @@ namespace TPortalProject.Application.Services
             if (user == null)
                 throw new Exception("User not found");
 
-            //Implementar AutoMapper
+            //Implementar AutoMapper e carregar objeto
 
             var userViewModel = new UserViewModel();
 
             return userViewModel;
+        }
+
+        public UserAuthResponseViewModel Authenticate(UserAuthRequestDTO userDTO)
+        {
+            var user = _userRepository.Find(x => !x.IsDeleted && x.Mail.ToLower() == userDTO.Mail.ToLower());
+            if (user == null)
+                throw new Exception("User not found");
+
+            var userViewModel = new UserViewModel();
+
+            //Implementar AutoMapper e carregar objeto
+
+            return new UserAuthResponseViewModel(userViewModel, TokenService.GenerateToken(user));
 
         }
     }

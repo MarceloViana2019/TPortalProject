@@ -85,6 +85,23 @@ namespace TPortalProject.Data.Repositories
         {
             throw new NotImplementedException();
         }
+
+        public T Find(Expression<Func<T, bool>> predicate)
+        {
+            try 
+            {
+                return DbSet.FirstOrDefault(predicate);
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
+        public T Find(Expression<Func<T, bool>> predicate, Func<IQueryable<T>, object> includes)
+        {
+            throw new NotImplementedException();
+        }
     }
 
 }

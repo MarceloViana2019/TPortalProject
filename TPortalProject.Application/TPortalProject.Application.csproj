@@ -5,6 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\TPortalProject.Auth\TPortalProject.Auth.csproj" />
     <ProjectReference Include="..\TPortalProject.Data\TPortalProject.Data.csproj" />
   </ItemGroup>
 

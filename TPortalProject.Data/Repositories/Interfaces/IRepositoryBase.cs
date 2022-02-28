@@ -15,6 +15,10 @@ namespace TPortalProject.Data.Repositories.Interfaces
 
         IQueryable<T> GetQuery(Expression<Func<T, bool>> predicate);
 
+        T Find(Expression<Func<T, bool>> predicate);
+
+        T Find(Expression<Func<T, bool>> predicate, Func<IQueryable<T>, object> includes );
+
         T Create(T info);
 
         int Insert(T info);

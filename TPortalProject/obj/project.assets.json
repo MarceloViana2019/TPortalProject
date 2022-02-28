@@ -1843,6 +1843,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v3.1",
         "dependencies": {
+          "TPortalProject.Auth": "1.0.0",
           "TPortalProject.Data": "1.0.0"
         },
         "compile": {

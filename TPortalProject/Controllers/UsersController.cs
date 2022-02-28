@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -10,7 +11,7 @@ using TPortalProject.Application.Interfaces;
 namespace TPortalProject.Controllers
 {
     [Route("api/[controller]")]
-    [ApiController]
+    [ApiController, Authorize]
     public class UsersController : ControllerBase
     {
         private readonly IUserService _userService;
@@ -26,7 +27,7 @@ namespace TPortalProject.Controllers
             return Ok(_userService.GetAll());
         }
 
-        [HttpPost]
+        [HttpPost, AllowAnonymous]
         public IActionResult Post(UserDTO user)
         {
             return Ok(_userService.Post(user));
@@ -36,6 +37,12 @@ namespace TPortalProject.Controllers
         public IActionResult GetById(int id)
         {
             return Ok(_userService.GetById(id));
+        }
+
+        [HttpPost("authenticate"), AllowAnonymous]
+        public IActionResult Atuthenticate(UserAuthRequestDTO userDTO)
+        {
+            return Ok(_userService.Authenticate(userDTO));
         }
     }
 }

@@ -6,6 +6,6 @@ namespace TPortalProject.Auth.Models
 {
     public static class Settings
     {
-        public static string Secret = "TPortalProject123";
+        public static string Secret = "TPortalProject123456";
     }
 }

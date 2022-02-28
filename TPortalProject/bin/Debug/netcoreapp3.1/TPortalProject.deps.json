@@ -1629,6 +1629,7 @@
       },
       "TPortalProject.Application/1.0.0": {
         "dependencies": {
+          "TPortalProject.Auth": "1.0.0",
           "TPortalProject.Data": "1.0.0"
         },
         "runtime": {
