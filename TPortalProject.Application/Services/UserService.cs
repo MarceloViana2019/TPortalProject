@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using TPortalProject.Application.DTO;
 using TPortalProject.Application.Interfaces;
@@ -25,8 +26,11 @@ namespace TPortalProject.Application.Services
 
             var users = _userRepository.GetAll();
 
-            foreach (var item in users)
-                userViewModels.Add(new UserViewModel { });
+            if (users.Any())
+            {
+                foreach (var item in users)
+                    userViewModels.Add(new UserViewModel { });
+            }
 
             return userViewModels;
         }
