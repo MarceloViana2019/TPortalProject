@@ -24,10 +24,14 @@ export class UserService {
   }
 
   register(username: string, email: string, password: string): Observable<any> {
-    return this.http.post(this.module + 'signup', {
+    return this.http.post(this.module + '/signup', {
       username,
       email,
       password
     }, httpOptions);
+  }
+
+  get(id: number): Observable<any> {
+    return this.http.get(this.module + '/' + id, httpOptions );
   }
 }

@@ -13,6 +13,7 @@ export class HttpInterceptorService implements HttpInterceptor {
   constructor(private tokenStorageService: TokenStorageService) { }
   
   intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
+
     let authReq = req;
     const token = this.tokenStorageService.getToken();
     if (token != null) {
@@ -22,6 +23,6 @@ export class HttpInterceptorService implements HttpInterceptor {
   }
 }
 
-export const authInterceptorProviders = [
-  { provide: HTTP_INTERCEPTORS, useClass: HttpInterceptorService, multi: true }
-];
+// export const authInterceptorProviders = [
+//   { provide: HTTP_INTERCEPTORS, useClass: HttpInterceptorService, multi: true }
+// ];
