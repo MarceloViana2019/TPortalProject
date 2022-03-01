@@ -71,11 +71,6 @@ namespace TPortalProject.Data.Repositories
             throw new NotImplementedException();
         }
 
-        public void Dispose()
-        {
-            throw new NotImplementedException();
-        }
-
         public T Create(T info)
         {
             throw new NotImplementedException();
@@ -102,6 +97,8 @@ namespace TPortalProject.Data.Repositories
         {
             throw new NotImplementedException();
         }
+
+        public void Dispose() => _context?.Dispose();
     }
 
 }

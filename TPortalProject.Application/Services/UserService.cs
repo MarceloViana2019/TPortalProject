@@ -56,7 +56,6 @@ namespace TPortalProject.Application.Services
                 throw new Exception("User not found");
 
             //Implementar AutoMapper e carregar objeto
-
             var userViewModel = new UserViewModel();
 
             return userViewModel;
@@ -73,7 +72,7 @@ namespace TPortalProject.Application.Services
             {
                 Id = 1,
                 Name = "Marcelo Viana",
-                Email = "fmsviana@gmail.com"
+                Email = userDTO.Email
             };
             //Implementar AutoMapper e carregar objeto
             var userViewModel = new UserViewModel() { 
