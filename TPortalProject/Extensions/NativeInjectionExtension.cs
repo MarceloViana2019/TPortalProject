@@ -5,6 +5,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using TPortalProject.Application.Interfaces;
 using TPortalProject.Application.Services;
+using TPortalProject.Application.Services.Interfaces;
 using TPortalProject.Data.Repositories;
 using TPortalProject.Data.Repositories.Interfaces;
 
@@ -17,6 +18,7 @@ namespace TPortalProject.Extensions
             #region Services
 
             services.AddScoped<IUserService, UserService>();
+            services.AddScoped<IHomeService, HomeService>();
 
             #endregion
 

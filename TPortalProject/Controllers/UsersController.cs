@@ -21,7 +21,7 @@ namespace TPortalProject.Controllers
             _userService = userService;
         }
 
-        [HttpGet, AllowAnonymous]
+        [HttpGet]
         public IActionResult Get()
         {
             return Ok(_userService.GetAll());
